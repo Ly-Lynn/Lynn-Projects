@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../allScreen/header';
 import ShowNavbar from '../allScreen/menu';
 import { Container } from 'react-bootstrap';
-// import 
+import MainGame from './MainGame';
 
 const ColorGame = () => {
     
@@ -10,9 +10,9 @@ const ColorGame = () => {
         <div>
             <ShowNavbar/>
             <Header title="Color Game pj"/>
-            <Container>
-                
-            </Container>
+            <div className='main-content col-lg height-100 bg-light'>
+               <MainGame/> 
+            </div>
         </div>
     )
 }

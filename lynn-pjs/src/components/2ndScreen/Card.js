@@ -1,11 +1,15 @@
 import React from "react";
-import './ColorGame.css'
+import './ColorGame.css';
 
-const Card = ({card, onclick}) => {
+const Card = ({ card, onClick }) => {
     return (
-        <div className={`card ${card.isFlipped ? 'flipped':''}`}  
-        onclick={onclick}>
-
+        <div
+            className={`card-game ${card.isFlipped ? 'flipped' : ''}`}
+            style={{ backgroundColor: card.isFlipped || card.isMatched ? card.color : '#ddd' }}
+            onClick={onClick}
+        >
         </div>
-    )
-}
+    );
+};
+
+export default Card;
