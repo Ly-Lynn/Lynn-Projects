@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Container, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const ShowNavbar = () => {
     useEffect(() => {
@@ -33,29 +34,37 @@ const ShowNavbar = () => {
                 toggle.removeEventListener('click', handleToggle);
             };
         }
-    }, []); // Empty dependency array ensures useEffect runs once
+    }); // Empty dependency array ensures useEffect runs once
 
     return (
         <div className="l-navbar" id="nav-bar">
             <nav className="nav">
                 <div>
-                    <a href="#" className="nav_logo" style={{textDecoration: 'none'}}>
+                    <Link to="/about-lynn" className="nav_logo" style={{textDecoration: 'none'}}>
                         <img
                             className="bx bx-layer nav_logo-icon"
                             src="imgs/logo.png"
                             height="58"
                             alt="logo"
                         />
-                    </a>
+                    </Link>
                     <div className="nav_list">
-                        <a href="/" className="nav_link" style={{textDecoration: 'none'}}>
+                        <Link to="/about-lynn" className="nav_link" style={{textDecoration: 'none'}}>
                             <i className="bx bx-order-alt nav_icon">
                                 <span className="material-symbols-outlined show">list_alt</span>
                             </i>
-                            <span className="nav_name" id="orderMenu">
+                            <span className="nav_name" id="profile">
                                 About Lynn
                             </span>
-                        </a>
+                        </Link>
+                        <Link to="/color-game" className="nav_link" style={{textDecoration: 'none'}}>
+                            <i className="bx bx-order-alt nav_icon">
+                                <span className="material-symbols-outlined show">list_alt</span>
+                            </i>
+                            <span className="nav_name" id="colorGame">
+                                Color Game
+                            </span>
+                        </Link>
                     </div>
                 </div>
             </nav>

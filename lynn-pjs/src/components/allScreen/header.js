@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = () => {
+const Header = ({ title }) => {
     return (
         <header className="header" id="header">
             <div id="main-screen-header" className="col" style={{ margin: 0, boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)' }}>
@@ -16,9 +16,9 @@ const Header = () => {
                                 </span>
                             </i>
                         </div>
-                    </div>
-                    <div className="col-8 text-center" style={{ fontSize: '2rem', padding: '1rem', fontWeight: 'bold' }}>
-                        Lynn's Projects
+                    </div>  
+                    <div id='header-title' className="col-8 text-center" style={{ fontSize: '2rem', padding: '1rem', fontWeight: 'bold' }}>
+                        {title}
                     </div>
                 </div>
             </div>
